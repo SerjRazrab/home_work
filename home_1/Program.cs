@@ -1,41 +1,41 @@
-﻿using System;
+﻿//Внутри класса Answer напишите метод CompareNumbers, который на вход принимает два числа и выводит, какое число большее, а какое меньшее.//
+
+using System;
 
 public class Answer {
-    static void CompareNumbers(int firstNumber, int secondNumber, int treenumber)
+    static void CompareNumbers(int firstNumber, int secondNumber)
     {
     // Введите свое решение ниже
     if ( firstNumber >  secondNumber)
     {
-        Console.WriteLine( firstNumber);
-    }
-    else if (treenumber > firstNumber)
-    {
-        Console.WriteLine(treenumber);
+        Console.WriteLine("Первое число `" +firstNumber+ "` больше второго `" +secondNumber + "`");
     }
     else
+    if (firstNumber==secondNumber)
     {
-        Console.WriteLine(secondNumber);
+        Console.WriteLine("Введенные числа равны `" +firstNumber+ "`");   
     }
-    Console.WriteLine("Very Beautifull");
+    else 
+    {
+       Console.WriteLine("Второе число `" +secondNumber+ "` больше первого `" +firstNumber + "`");
+    }
     }
 
 
   // Не удаляйте и не меняйте метод Main! 
     static public void Main(string[] args) {
-        int firstNumber, secondNumber, treenumber;
+        int firstNumber, secondNumber;
 
         if (args.Length >= 2) {
             firstNumber = int.Parse(args[0]);
             secondNumber = int.Parse(args[1]);
-            treenumber = int.Parse(args[2]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            firstNumber = 7;
-            secondNumber = 9;
-            treenumber = 15;
+            firstNumber = 12;
+            secondNumber = 12;
         }
 
         // Не удаляйте строки ниже
-        CompareNumbers(firstNumber, secondNumber, treenumber);
+        CompareNumbers(firstNumber, secondNumber);
     }
 }
